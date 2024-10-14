@@ -8,6 +8,15 @@
     <link rel="stylesheet" href="styles.css"> 
     <link rel="stylesheet" href="slider.css">
     <link rel="stylesheet" href="information.css">
+
+
+    <style>
+        iframe {
+            width: 100%;
+            height: 500px; 
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,13 +32,14 @@
             <div class="introduction">
                 <h2> Hello! I'm Tuba</h2>
                 <br>
-                <p>I'm a paragraph. Click here to add your own text and edit me.</p>
-                <p>I'm a great place for you to tell a story and let your users know a little more about you.</p>
+                <p>I am a 4th year student at Hacettepe University Geomatics Engineering.</p>
+                <p>You can find information about me on this page.</p>
                 <br>
                 <a href="Tuba_cv.pdf" class="info-link">Download My Resume</a>
 
             </div>
-        </div>
+            
+        </div>       
 
         <!-- Slider HTML kodu -->
         <div class="slider">
@@ -40,13 +50,15 @@
                         <div class="education">
                             <div class="school">
                                 <h3>Hacettepe University</h3>
+                                <p>Faculty of Engineering</p>
                                 <p>Department of Geomatics Engineering</p>
                                 <p>2020-2025</p>
                             </div>
                             <div class="school">
-                                <h3>Anadolu University</h3>
-                                <p>Department of Economics</p>
-                                <p>2004-2010</p>
+                                <h3>Ankara University</h3>
+                                <p>Institute of Science and Technology</p>
+                                <p>Department of Real Estate Development / Master's Degree</p>
+                                <p>2012-2014</p>
                             </div>
                             <div class="school">
                                 <h3>Gazi University</h3>
@@ -74,32 +86,53 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="slide" style="background-color: lightblue;">
                     <div class="slide-content">
+                        <h2>PROGRAMS</h2>
                         <div class="skill-section">
-                            <div class="skill">
-                                <h3>1. Yetenek: Programlama</h3>
-                                <p>Sertifika: XYZ Programlama Sertifikası</p>
-                                <p>Tarih: 2024</p>
+                            <div class="program-container">
+                                <div class="program">
+                                    <h3>Python</h3> 
+                                    <img src="image/python.jpg">
+                                      
+                                </div>
+                                <div class="program">
+                                    <h3>QGIS</h3>  
+                                    <img src="image/qgis.jpg" alt="QGIS">
+  
+                                </div>
+                                <div class="program">
+                                    <h3>Erdas Image</h3>
+                                    <img src="image/erdas.jpg">
+                                    
+                                </div>
+                                <div class="program">
+                                    <h3>Netcad</h3>
+                                    <img src="image/netcad.jpg" alt="Netcad">
+                                    
+                                </div>
+                                <div class="program">
+                                    <h3>PostgreSQL</h3>
+                                    <img src="image/PostgreSQL.jpg" alt="PostgreSQL">
+                                    
+                                </div>
+                                <div class="program">
+                                    <h3>Matlab</h3>
+                                    <img src="image/matlab.jpg" alt="Matlab">
+                                    
+                                </div>
+                                <div class="program">
+                                    <h3>Agisoft</h3>
+                                    <img src="image/agisoft.jpg" alt="Agisoft">
+                                    
+                                </div>
                             </div>
-                            <div class="skill">
-                                <h3>2. Yetenek: Proje Yönetimi</h3>
-                                <p>Sertifika: ABC Proje Yönetimi Sertifikası</p>
-                                <p>Tarih: 2023</p>
-                            </div>
-                            <div class="skill">
-                                <h3>3. Yetenek: İletişim</h3>
-                                <p>Sertifika: DEF İletişim Sertifikası</p>
-                                <p>Tarih: 2022</p>
-                            </div>
-                        </div>                    
+                        </div>
                     </div>            
                 </div>
-
                 <div class="slide" style="background-color: lightblue;">
                     <section class="hobbies-section">
-                        <iframe src="hobbies.html" style="width: 100%; height: 300px; border: none;"></iframe>
+                        <iframe src="hobbies.html" style="width: 180%; height: 300px; position: relative; border: none;"></iframe>
                     </section>
                 </div>           
             </div>
@@ -108,7 +141,36 @@
             <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
             <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
+        <div class="publication">
+            <h2>My Published Article</h2>
+            <br>
+            <h4>
+                ALİEFENDİOĞLU, Y., & ÇEVİK, T., (2015). Comparison of Loan Usage Amounts and House Sales Values ​​of Mortgage Loan Customers. Çankaya District Example. International Journal of Social Research, vol.8, no.41, 1101-1115.
+            </h4>
+            <br>
+            <p>
+                In this study, housing loan applications and the infrastructure of the housing finance system in Turkey were examined. Using data on "sales-mortgage" transactions between 2010 and 2012 obtained from Çankaya Land Registry Directorate, the reasons for the differences between the loan usage amounts of housing loan customers and the declared sales values ​​of real estate were investigated.
 
+                By examining the changes in the data regarding loan usage between 2010 and 2012, it is observed that loan usage amounts approach the value of the real estate and house sales values ​​are declared more realistic. 
+                
+                In general, the main reasons why house sales values ​​are unrealistic are; It has been determined that housing loan collateral values are overstated, high fee rates and lack of awareness of loan users.
+            </p>
+            <br>
+
+            <a href="https://www.researchgate.net/publication/318637035_KONUT_KREDISI_MUSTERILERININ_KREDI_KULLANIM_TUTARLARI_veKONUT_SATIS_DEGERLERININ_KARSILASTIRILMASI_CANKAYA_ILCESI_ORNEGI_LOAN_USAGE_AMOUNTS_OF_HOUSING_LOAN_CUSTOMERS_AND_COMPARISON_OF_HOME_SALES_VALUE" target="_blank">Click To See The Article</a>
+        </div>
+        <br>
+        <br>
+
+
+        <h2>Cities I Visited</h2>
+        <p>You can see the cities I visited on the map below.</p>
+    
+        <!-- Harita iframe içinde gösteriliyor -->
+        <iframe src="map.html" title="Cities I Visited"></iframe>
+        <br>
+        <br>
+        
         <!-- İletişim Bilgileri Bölümü -->
         <footer>
                 <h2>My Contact Information</h2>
@@ -154,8 +216,7 @@
                 <a href="https://github.com/GMT-458-Web-GIS/personal-web-page-tubacevik" style="color: black; text-decoration: none;">Github</a>
             </div>
         </div>
-    
-    
+
         
     </main>
 

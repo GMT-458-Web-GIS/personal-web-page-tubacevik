@@ -1,0 +1,179 @@
+
+.slider {
+    position: relative;
+    width: 80vw;            /* Genişliği ayarlayın */
+    height: 500px;          /* Yükseklik ayarı */
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;    
+    width: 1000%; 
+    height: 100%;
+    transition: transform 0.9s ease-in-out;
+}
+
+.slide {
+    width: 80vw;           /* Her slayt genişliği %100 */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2dcdc;
+    border: 2px solid black;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide-content {
+    width: 200%;             /* Yazı alanını genişlet */
+    
+    margin: 0 auto;        /* Ortalamak için */
+    padding: 20px;         /* İç boşluk ekle */
+    text-align: center;     /* Metni ortala */
+
+}
+
+.education {
+    display: flex;                  /* Flexbox kullanarak yan yana dizme */
+    justify-content: center;        /* Ortalamak için */
+    align-items: flex-start;       /* Üstten hizala */
+    flex-wrap: wrap;               /* Taşma durumunda alt satıra geçme */
+    margin: 20px;                  /* Dış boşluk */
+}
+
+.school {
+    display: block;
+    padding: 20px;                  /* İç boşluk */
+    margin: 10px;                   /* Dış boşluk */
+    width: 300px;                   /* Sabit genişlik */
+    text-align: center;             /* Metni ortalamak için */
+
+}
+
+.school h3 {
+    margin: 0;                      /* Başlık için varsayılan marjı sıfırla */
+}
+
+.school p {
+    margin: 5px 0;                 /* Paragraflar arasında boşluk */
+}
+
+
+.skill-section {
+    display: flex;                  /* Flexbox kullanarak yan yana dizme */
+    justify-content: center;        /* Ortalamak için */
+    align-items: flex-start;       /* Üstten hizala */
+    flex-wrap: wrap;               /* Taşma durumunda alt satıra geçme */
+    margin: 20px;                  /* Dış boşluk */
+}
+
+.skill {
+    display: block;
+    padding: 20px;                  /* İç boşluk */
+    margin: 10px;                   /* Dış boşluk */
+    width: 300px;                   /* Sabit genişlik */
+    text-align: center;             /* Metni ortalamak için */
+
+}
+
+.skill h3 {
+    margin: 0;                      /* Başlık için varsayılan marjı sıfırla */
+}
+
+.skill p {
+    margin: 5px 0;                 /* Paragraflar arasında boşluk */
+}
+
+.experience {
+    display: flex;                  /* Flexbox kullanarak yan yana dizme */
+    justify-content: center;        /* Ortalamak için */
+    align-items: flex-start;       /* Üstten hizala */
+    flex-wrap: wrap;               /* Taşma durumunda alt satıra geçme */
+    margin: 20px;                  /* Dış boşluk */
+}
+
+.job {
+    display: block;
+
+    padding: 20px;                  /* İç boşluk */
+    margin: 10px;                   /* Dış boşluk */
+    width: 300px;                   /* Sabit genişlik */
+    text-align: center;             /* Metni ortalamak için */
+
+}
+
+.job h3 {
+    margin: 0;                      /* Başlık için varsayılan marjı sıfırla */
+}
+
+.job p {
+    margin: 5px 0;                 /* Paragraflar arasında boşluk */
+}
+
+
+
+button {
+    position: absolute;
+    top: 50%; /* Dikey olarak ortalar */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px; /* Soldan konumlandır */
+}
+
+.next {
+    right: 10px; /* Sağdan konumlandır */
+}
+
+
+.hobby-container {
+    display: flex;               /* İkonları yan yana dizmek için */
+    justify-content: center;     /* Ortala */
+    align-items: flex-start;     /* Dikeyde üstte hizala */
+    gap: 20px;                  /* İkonlar arasındaki boşluk */
+}
+
+.hobby-item {
+    display: flex;               /* İçindeki metin ile ikonu yan yana hizalar */
+    flex-direction: column;      /* İkon üstte, metin altta olacak şekilde */
+    align-items: center;         /* Ortala */
+    text-align: center;          /* Metni ortala */
+}
+
+.hobby-container i {  
+    font-size: 50px;             /* İkon boyutunu ayarlayın */
+}
+
+.hobby-item p {
+    margin-top: 10px;             /* İkon ile metin arasındaki boşluğu ayarla */
+    font-size: 14px;              /* Metin boyutunu ayarlayın */
+}
+
+
+.program-container {
+    display: flex; /* Yatay hizalama */
+    justify-content: space-around; /* İkonlar arasındaki boşluk */
+    flex-wrap: wrap; /* Ekran küçüldüğünde alt satıra geçer */
+  }
+  
+  .program {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .program img {
+    width: 80px; /* İkon boyutunu ayarla */
+    height: auto;
+  }
+  
+  .program p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
