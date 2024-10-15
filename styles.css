@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background: url('image/geomatic.jpeg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.header-container {
+    display: flex;              
+    flex-direction: column;  
+    align-items: center;      
+}
+
+.header-container h1 {
+    font-size: 3em;
+    color: white;
+    margin: 0;                
+}
+
+
+.download-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    background-color: #007BFF;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-icon:hover {
+    background-color: #0056b3;
+}
+
+.download-icon i {
+    font-size: 20px;
+}
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Added for absolute positioning of the image */
+}
+
+.profile-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: absolute;
+    top: -75px; /* Adjust to position above content */
+    left: 50%;
+    transform: translateX(-50%); /* Center the image */
+    border: 5px solid #fff;
+}
+
+.introduction {
+    margin-top: 100px; /* Adjust for image height */
+    text-align: center;
+    
+}
+
+.introduction a {
+    text-decoration: none; /* Altı çizili iptal */
+    color: red; /* Varsayılan renk */
+    animation: blink 1s infinite; /* Yanıp sönme efekti */
+}
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Üstten boşluk ekler */
+}
+
+.icon {
+    margin-right: 20px; /* İkonlar arasında boşluk bırakır */
+    text-align: center; /* İkon ve yazıyı ortalar */
+}
+
+.icon i {
+    font-size: 24px; /* İkon boyutu */
+    display: block; /* İkonu ayrı bir satırda gösterir */
+}
+
+.icon span {
+    display: block; /* Yazıyı ayrı bir satırda gösterir */
+    font-size: 14px; /* Yazı boyutu */
+}
+
+
+.profile-details {
+    padding: 20px;
+}
+
+
+.hobby-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 18px; /* İkonlar arasındaki boşluk */
+}
+
+.hobby-container i {
+    text-align: center;
+    margin: 10px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #98bcc4;
+    transition: background-color 0.3s ease;
+    font-size: 48px;
+    color: #333;
+}
+
+.hobby-container i:hover {
+    background-color:#f0f0f0; /* Hover efektiyle arka plan rengi değişimi */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
+
+.publication a {
+    text-decoration: none; /* Altı çizili iptal */
+    color: red; /* Varsayılan renk */
+    animation: blink 1s infinite; /* Yanıp sönme efekti */
+
+}
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Tam görünür */
+    }
+    50% {
+        opacity: 0; /* Görünmez */
+    }
+}
+

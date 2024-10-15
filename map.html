@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: relative;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .topbar {
+            background-color: #f4f4f4;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .topbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .topbar i {
+            font-size: 1.5rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+    <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
+    <script>
+        const cities = [
+            { name: 'Istanbul', coordinates: [28.976, 41.008] },
+            { name: 'Ankara', coordinates: [32.8597, 39.9334] },
+            { name: 'Izmir', coordinates: [27.1448, 38.4192] },
+            { name: 'Antalya', coordinates: [30.6954, 36.9092] },
+            { name: 'Mardin', coordinates: [40.7415, 37.3173] },
+            { name: 'Gaziantep', coordinates: [37.0662, 37.0662] }, 
+            { name: 'Samsun', coordinates: [36.33, 41.29] }, 
+            { name: 'Sinop', coordinates: [35.1534, 42.0075] } 
+        ];
+
+        const map = new ol.Map({
+            target: 'map',
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([30, 40]),
+                zoom: 5
+            })
+        });
+
+        cities.forEach(city => {
+            const marker = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat(city.coordinates)),
+                name: city.name
+            });
+
+            const vectorSource = new ol.source.Vector({
+                features: [marker]
+            });
+
+            const markerVectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                style: new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 5, // Dairenin yarıçapı
+                        fill: new ol.style.Fill({
+                            color: 'red' // Dairenin rengi
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: 'black', // Kenar rengi
+                            width: 1 // Kenar kalınlığı
+                        })
+                    })
+                })
+            });
+
+            map.addLayer(markerVectorLayer);
+        });
+    </script>
+</body>
+</html>
