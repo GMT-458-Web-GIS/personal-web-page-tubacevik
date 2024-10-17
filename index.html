@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuba ÇEVİK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <nav class="navigation">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776; 
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experiences.html">Work Experiences</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="Tuba_cv.pdf" download="Download My CV" class="btn-download">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+        <img src="tuba.jpg" alt="Profile Photo" class="profile-img">
+        <div class="content">
+            <h1>Tuba ÇEVİK</h1>
+            <h2>Geomatics Engineer</h2>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("active"); /* Menü açılır/kapanır */
+        }
+    </script>
+</body>
+</html>
+
+
+
+

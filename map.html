@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visited Places - Tuba Çevik</title>
+    <link rel="icon" href="images/space-shuttle.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: lightblue;
+            padding: 15px;
+            text-align: center;
+        }
+        #map {
+            height: 100vh; 
+            width: 100%; 
+        }
+        button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Visited Places</h1>
+        
+    </header>
+
+    <div id="map"></div>
+    <button id="back-button" onclick="goBack()">Back to Home</button>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Harita başlatma
+        const map = L.map('map').setView([39.9334, 32.8597], 5); 
+
+        // OSM Katmanını ekle
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Şehirler ve bilgileri
+        const places = [
+            { name: 'Ankara', coordinates: [39.9334, 32.8597], img: 'Ankara_sehir.jpg' },
+            { name: 'Istanbul', coordinates: [41.0082, 28.9784], img: 'istanbul.jpg' },
+            { name: 'Izmir', coordinates: [38.4192, 27.1287], img: 'izmir.jpg' },
+            { name: 'Mardin', coordinates: [37.3169, 40.7376], img: 'mardin.jpg' },
+            { name: 'Fethiye', coordinates: [36.6333, 29.1176], img: 'fethiye.jpg' },
+            { name: 'Samsun', coordinates: [41.2866, 36.33], img: 'samsun.jpg' },
+            { name: 'Sinop', coordinates: [42.0082, 35.1595], img: 'sinop.jpg' },
+            { name: 'Gaziantep', coordinates: [37.0662, 37.3833], img: 'antep.jpg' }
+];
+
+        
+        places.forEach(place => {
+            const marker = L.marker(place.coordinates).addTo(map);
+            marker.bindPopup(`<b>${place.name}</b><br><img src="${place.img}" alt="${place.name} image" style="width: 300px; height: auto;">`, { maxWidth: 350 });
+        });
+
+        
+        function goBack() {
+            window.location.href = 'index.html'; 
+        }
+    </script>
+</body>
+</html>
+
+
+
+

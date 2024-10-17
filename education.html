@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Tuba Çevik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger menü simgesi (üç çizgi) -->
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experiences.html">Work Experiences</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="Tuba_cv.pdf" download="Download My CV" class="btn-download">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="education-section">
+        <h1>Education</h1>
+        <div class="education-container">
+            <div class="education-box">
+                <img src="hacettepe-logo.png" alt="Hacettepe University Logo" class="school-logo">
+                <h3>Hacettepe University</h3>
+                <p>Geomatics Engineering</p>
+                <p>2020-2025</p>
+            </div>            
+            <div class="education-box">
+                <img src= "ankara.png" alt="Ankara University Logo" class="school-logo">
+                <h3>Ankara University</h3>
+                <p>Real Estate Development / Master's Degree</p>
+                <p>2012-2014</p>
+            </div>
+            <div class="education-box">
+                <img src="gazi_university_logo.png" alt="Gazi University Logo" class="school-logo">
+                <h3>Gazi University</h3>
+                <p>Map and Cadastre</p>
+                <p>2000-2002</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.classList.add("fade", "show");
+            const links = document.querySelectorAll('.navigation a');
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetPage = this.getAttribute('href');
+                    document.body.classList.remove("show");
+                    setTimeout(() => {
+                        window.location.href = targetPage;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
